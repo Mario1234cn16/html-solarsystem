@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <html>
+	<head>
+		<title>Solar System</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<canvas id="myCanvas" width="1300" height="1000"></canvas>
+		<script>
+			var startX1 = 650;
+			var startY1 = 450;
+			var startX2 = 650;
+			var startY2 = 437;
+			var startX3 = 650;
+			var startY3 = 387;
+			var startX4 = 650;
+			var startY4 = 357;
+			var startX5 = 650;
+			var startY5 = 317;     /* -y = sus   y = jos */
+			var startX6 = 650;
+			var startY6 = 257;
+			var startX7 = 650;
+			var startY7 = 217;
+			var startX8 = 650;
+			var startY8 = 97;
+			var radians1 = 0;
+			var radians2 = 0;
+			var radians3 = 0;
+			var radians4 = 0;
+			var radians5 = 0;
+			var radians6 = 0;
+			var radians7 = 0;
+			var radians8 = 0;
+			var velocity1 = 0.05;
+			var velocity2 = 0.08;
+			var velocity3 = 0.02;
+			var velocity4 = 0.005;
+			var velocity5 = 0.003;
+			var velocity6 = 0.002;
+			var velocity7 = 0.005;
+			var velocity8 = 0.0009;
+			var canvas = document.getElementById('myCanvas'); 
+			var ctx = canvas.getContext('2d');    
+			var moveCircle = setInterval(animate, 10);
+			function animate() {
+				if (startX1 < 1200){
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'beige';
+                ctx.beginPath(); 
+                ctx.arc(startX1, startY1, 3, 0 * Math.PI, 2 * Math.PI);
+				ctx.fill();			
+				ctx.beginPath();
+				ctx.arc(650, 500, 30, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'yellow';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX2, startY2, 4, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'cornsilk';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX3, startY3, 6, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'aqua';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX4, startY4, 5, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'coral';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX5, startY5, 20, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'saddlebrown';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX6, startY6, 20, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'Khaki';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX6, startY6, 17, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'black';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX6, startY6, 13, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'burlywood';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX7, startY7, 13, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = '#66c2ff';
+                ctx.fill();
+				ctx.beginPath();
+				ctx.arc(startX8, startY8, 15, 0 * Math.PI, 2 * Math.PI);
+				ctx.fillStyle = 'royalblue';
+                ctx.fill();
+				radians1 += velocity1;
+				radians2 += velocity2;
+				radians3 += velocity3;
+				radians4 += velocity4;
+				radians5 += velocity5;
+				radians6 += velocity6;
+				radians7 += velocity7;
+				radians8 += velocity8;
+                startX1 += Math.cos(radians1) * 2.5;
+				startY1 += Math.sin(radians1) * 2.5;
+				startX2 += Math.cos(radians2) * 5;
+				startY2 += Math.sin(radians2) * 5;
+				startX3 += Math.cos(radians3) * 2.3;
+				startY3 += Math.sin(radians3) * 2.3;
+				startX4 += Math.cos(radians4) * 0.8;
+				startY4 += Math.sin(radians4) * 0.8;
+				startX5 += Math.cos(radians5) * 0.6;
+				startY5 += Math.sin(radians5) * 0.6;
+				startX6 += Math.cos(radians6) * 0.5;
+				startY6 += Math.sin(radians6) * 0.5;
+				startX7 += Math.cos(radians7) * 1.5;
+				startY7 += Math.sin(radians7) * 1.5;
+				startX8 += Math.cos(radians8) * 0.4;
+				startY8 += Math.sin(radians8) * 0.4;
+            }
+        }
+		</script>
+	</body>
+  </html>
